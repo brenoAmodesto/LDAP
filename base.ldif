@@ -1,0 +1,40 @@
+
+dn: dc=exemplo,dc=com
+dc: exemplo
+objectClass: top
+objectClass: domain
+
+dn: cn=ldapadm,dc=exemplo,dc=com
+objectClass: organizationalRole
+cn: ldapadm
+description: LDAP Manager
+
+dn: c=BR,dc=exemplo,dc=com
+objectClass: country
+c: BR
+
+dn: c=US,dc=exemplo,dc=com
+ObjectClass: country
+c: US
+
+dn: o=empresa,c=BR,dc=exemplo,dc=com 
+objectclass: organization
+o: empresa
+
+dn: ou=Lojas,o=empresa,c=BR,dc=exemplo,dc=com
+objectClass: organizationalUnit
+ou: Lojas 
+
+dn: uid=teste,ou=Lojas,o=empresa,c=BR,dc=exemplo,dc=com
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: teste
+uid: teste
+uidNumber: 9999
+gidNumber: 100
+homeDirectory: /home/teste
+loginShell: /bin/bash
+gecos: Joao [LDAP]
+userPassword: {crypt}x
